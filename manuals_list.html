@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ทดสอบคลังคู่มือเซ็ตระบบ</title>
+  <style>
+    :root {
+      --bg-color: #fafafa;
+      --card-bg: #ffffff;
+      --primary: #f97316;
+      --primary-light: #fff7ed;
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --border-subtle: #f1f5f9;
+      --border-orange-subtle: #ffedd5;
+      --border-orange: #fdba74;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      padding: 3rem 1rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 1.2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    header h1 span {
+      color: var(--primary);
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Brand Section Styling */
+    .brand-section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-orange-subtle);
+      border-top: 3px solid var(--primary);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .brand-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Category Grid */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .category-card {
+      background-color: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .category-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Subtle Action Buttons */
+    .file-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .manual-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fafafa;
+      color: #334155;
+      text-decoration: none;
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .manual-btn:hover {
+      background-color: var(--primary-light);
+      border-color: var(--border-orange);
+      color: #c2410c;
+    }
+
+    .btn-content {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      background-color: #ffffff;
+      color: var(--text-muted);
+      border: 1px solid #e2e8f0;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .manual-btn:hover .badge {
+      background-color: #ffffff;
+      color: var(--primary);
+      border-color: var(--border-orange);
+    }
+
+    .arrow-icon {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      transition: all 0.2s ease;
+    }
+
+    .manual-btn:hover .arrow-icon {
+      color: var(--primary);
+      transform: translateX(3px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1><span>ทดสอบคลังคู่มือเซ็ตระบบ</span></h1>
+      <p>คลังเอกสารและคู่มือการใช้งานสำหรับระบบต่างๆ</p>
+    </header>
+
+    <!-- BRAND 1: ENPHASE -->
+    <section class="brand-section">
+      <h2 class="brand-title">Enphase</h2>
+
+      <div class="category-grid">
+        
+        <!-- Category 1 -->
+        <div class="category-card">
+          <h3>📂 คู่มือการเซ็ตระบบ Commissioning</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Enphase - คู่มือการเซ็ตระบบ 20260810.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการเซ็ตระบบ</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category-card">
+          <h3>📖 คู่มือการใช้งาน</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Enphase - คู่มือการใช้งาน Enlighten 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งาน Enlighten</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+            <li>
+              <a href="Enphase - คู่มือการใช้งานฉบับเต็ม Enlighten 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งานฉบับเต็ม Enlighten</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="category-card">
+          <h3>📌 Misc</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Enphase - คู่มือตู้ PV-MDB 20261027.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือตู้ PV-MDB</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND 2: HOYMILES -->
+    <section class="brand-section">
+      <h2 class="brand-title">Hoymiles</h2>
+
+      <div class="category-grid">
+        
+        <!-- Category 1 -->
+        <div class="category-card">
+          <h3>📂 คู่มือการเซ็ตระบบ Commissioning</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Hoymiles - คู่มือการเซ็ตระบบ 20260819.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการเซ็ตระบบ</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category-card">
+          <h3>📖 คู่มือการใช้งาน</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Hoymiles - คู่มือการใช้งาน S-Miles Enduser 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งาน S-Miles Enduser</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+            <li>
+              <a href="Hoymiles - คู่มือการใช้งานฉบับเต็ม S-Miles Enduser 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งานฉบับเต็ม S-Miles Enduser</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="category-card">
+          <h3>📌 Misc</h3>
+          <ul class="file-list">
+            <!-- Reserved for future files -->
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND 3: HUAWEI -->
+    <section class="brand-section">
+      <h2 class="brand-title">Huawei</h2>
+
+      <div class="category-grid">
+        
+        <!-- Category 1 -->
+        <div class="category-card">
+          <h3>📂 คู่มือการเซ็ตระบบ Commissioning</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Huawei - คู่มือเซ็ตระบบ V2 20261020.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือเซ็ตระบบ V2</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category-card">
+          <h3>📖 คู่มือการใช้งาน</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Huawei - คู่มือการใช้งาน FusionSolar 20261027.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งาน FusionSolar</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+            <li>
+              <a href="Huawei - คู่มือการใช้งานฉบับเต็ม FusionSolar 20261027.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งานฉบับเต็ม FusionSolar</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="category-card">
+          <h3>📌 Misc</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Huawei - การตั้งค่าอินเทอร์เน็ต 20261020.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>การตั้งค่าอินเทอร์เน็ต</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND 4: SIGENERGY -->
+    <section class="brand-section">
+      <h2 class="brand-title">SigEnergy</h2>
+
+      <div class="category-grid">
+        
+        <!-- Category 1 -->
+        <div class="category-card">
+          <h3>📂 คู่มือการเซ็ตระบบ Commissioning</h3>
+          <ul class="file-list">
+            <li>
+              <a href="SigEnergy - คู่มือการเซ็ตระบบ 20260828.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการเซ็ตระบบ</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category-card">
+          <h3>📖 คู่มือการใช้งาน</h3>
+          <ul class="file-list">
+            <li>
+              <a href="SigEnergy - คู่มือการใช้งาน mySigen 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งาน mySigen</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+            <li>
+              <a href="SigEnergy - คู่มือการใช้งานฉบับเต็ม mySigen 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งานฉบับเต็ม mySigen</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="category-card">
+          <h3>📌 Misc</h3>
+          <ul class="file-list">
+            <!-- Reserved for future files -->
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND 5: SOLIS -->
+    <section class="brand-section">
+      <h2 class="brand-title">Solis</h2>
+
+      <div class="category-grid">
+        
+        <!-- Category 1 -->
+        <div class="category-card">
+          <h3>📂 คู่มือการเซ็ตระบบ Commissioning</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Solis - คู่มือการเซ็ตระบบ 20260825_Rev สร้อย.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการเซ็ตระบบ</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category-card">
+          <h3>📖 คู่มือการใช้งาน</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Solis - คู่มือการใช้งาน SolisCloud 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งาน SolisCloud</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+            <li>
+              <a href="Solis - คู่มือการใช้งานฉบับเต็ม SolisCloud 20260925 (1).pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งานฉบับเต็ม SolisCloud</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="category-card">
+          <h3>📌 Misc</h3>
+          <ul class="file-list">
+            <!-- Reserved for future files -->
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND 6: TESLA -->
+    <section class="brand-section">
+      <h2 class="brand-title">Tesla</h2>
+
+      <div class="category-grid">
+        
+        <!-- Category 1 -->
+        <div class="category-card">
+          <h3>📂 คู่มือการเซ็ตระบบ Commissioning</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Tesla - คู่มือการเซ็ตระบบ 20260831.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการเซ็ตระบบ</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category-card">
+          <h3>📖 คู่มือการใช้งาน</h3>
+          <ul class="file-list">
+            <li>
+              <a href="Tesla - คู่มือการใช้งาน Tesla App 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งาน Tesla App</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+            <li>
+              <a href="Tesla - คู่มือการใช้งานฉบับเต็ม Tesla App 20260925.pdf" target="_blank" class="manual-btn">
+                <span class="btn-content">
+                  <span>คู่มือการใช้งานฉบับเต็ม Tesla App</span>
+                  <span class="badge">PDF</span>
+                </span>
+                <span class="arrow-icon">➔</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="category-card">
+          <h3>📌 Misc</h3>
+          <ul class="file-list">
+            <!-- Reserved for future files -->
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
